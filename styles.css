@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Stint+Ultra+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:wght@700&display=swap');
+
+body {
+  background-size: 40px 40px;
+  background-image: radial-gradient(circle, #C3CAD5 1px, rgba(0, 0, 0, 0) 1px);
+  font-family: 'PT Serif', serif;
+  background-color: #FFFEE4;
+  color: #212529;
+}
+
+h1 {
+  font-family: 'PT Serif', serif;
+  font-size: 25px;
+  text-shadow: 2px 2px #036DC9;
+  position: relative;
+  left: 10px;
+  top: 1px;
+  padding: 20px;
+  color: #BDE0FE;
+}
+
+h2 {
+  color: #BDE0FE;
+  text-align: center;
+}
+
+h3 {
+  font-size: 40px;
+  text-shadow: 2px 2px #036DC9;
+  color: #BDE0FE;
+  text-align: center;
+}
+
+#myContactHeader {
+  font-family: 'EB Garamond', serif;
+  font-size: 20px;
+  padding: 5px;
+  text-align: center;
+  color: #5C5C5C;
+  margin: auto;
+}
+
+#myHeader1 {
+  font-size: 40px;
+  text-shadow: 2px 2px #5C6FFF;
+  color: #B8C0FF;
+  text-align: center;
+}
+
+#myHeader2 {
+  font-size: 40px;
+  padding-top: 10px;
+  text-shadow: 2px 2px #5C6FFF;
+  color: #B8C0FF;
+  text-align: center;
+}
+
+p {
+  font-family: 'EB Garamond', serif;
+  font-size: 25px;
+  text-align: center;
+  color: #5C5C5C;
+  margin: auto;
+  padding-top: 50px;
+  padding-right: 200px;
+  padding-left: 200px;
+}
+
+.nav1 {
+  display: block;
+  margin: auto;
+  text-align: right;
+  font-size: 16px;
+  padding-left: 20px;
+  padding-bottom: 20px;
+  position: absolute;
+  left: 350px;
+  top: 44px;
+  right: 20px;
+}
+
+.nav1 a {
+  color: #5C5C5C;
+}
+
+.nav1 a:visited {
+  color: #BDE0FE;
+}
+
+.nav2 {
+  margin: auto;
+  text-align: left;
+  padding-top: 60px;
+  padding-bottom: 20px;
+  position: fixed;
+  top: 100px;
+  left: 50px;
+  max-width: 15%;
+}
+
+.nav2 a {
+  display: block;
+  color: #5C5C5C;
+  padding-bottom: 10px;
+}
+
+.nav2 a:visited {
+  color: #BDE0FE;
+}
+
+.splash img {
+  display: block;
+  margin: auto;
+}
+
+.main {
+  margin: auto;
+  max-width: 1000%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  padding: 0px;
+}
+
+.main img:hover {
+  opacity: 0.5;
+}
+
+.ando {
+  margin: auto;
+  max-width: 1000%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  padding: 0px;
+}
+
+.ando-big {
+  max-width: 500%;
+  height: 50%;
+  padding: 10px;
+  text-align: center;
+  flex: 33% 10% auto;
+}
+
+.ando-small {
+  max-width: 100%;
+  height: auto;
+  padding: 10px;
+  text-align: center;
+  flex: 33% 10% auto;
+}
+
+.app {
+  max-width: 1000%;
+  height: 50%;
+  padding: 0px;
+  align-content: center;
+  text-align: center;
+}
+
+.app-small {
+  max-width: 100%;
+  height: auto;
+  padding: 60px;
+  text-align: center;
+  flex: 33% 10% auto;
+}
+
+.app img:hover {
+  opacity: 0.5;
+}
+
+.web {
+  margin: auto;
+  max-width: 1000%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  padding: 0px;
+}
+
+.web img:hover {
+  opacity: 0.5;
+}
+
+.web-small {
+  max-width: 100%;
+  height: auto;
+  padding: 10px;
+  text-align: center;
+  flex: 33% 10% auto;
+}
+
+.myprofile {
+  margin: auto;
+  max-width: 1000%;
+  display: flex;
+  align-items: left;
+  padding-top: 100px;
+}
+
+footer {
+  text-align: center;
+  font-family: 'EB Garamond', serif;
+  font-size: 14px;
+  color: #9FAABC;
+  margin-top: 150px;
+  margin-bottom: 20px;
+}

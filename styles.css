@@ -33,6 +33,29 @@ h3 {
   text-align: center;
 }
 
+h4 {
+  font-family: 'PT Serif', serif;
+  font-size: 25px;
+  text-shadow: 2px 2px #036DC9;
+  position: relative;
+  text-align: center;
+  left: 10px;
+  top: 1px;
+  padding: 20px;
+  color: #BDE0FE;
+}
+
+.myText {
+  font-family: 'EB Garamond', serif;
+  font-size: 1px;
+  text-align: center;
+  color: #5C5C5C;
+  margin: auto;
+  padding-top: -70px;
+  padding-right: 200px;
+  padding-left: 200px;
+}
+
 #myContactHeader {
   font-family: 'EB Garamond', serif;
   font-size: 20px;
@@ -157,6 +180,17 @@ p {
   flex: 33% 10% auto;
 }
 
+.poster {
+  margin: auto;
+  max-width: 1000%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  padding: 50px;
+}
+
 .app {
   max-width: 1000%;
   height: 50%;
@@ -195,6 +229,9 @@ p {
 .web-small {
   max-width: 100%;
   height: auto;
+  list-style: none;
+  display: inline;
+  white-space: nowrap;
   padding: 10px;
   text-align: center;
   flex: 33% 10% auto;

@@ -48,12 +48,12 @@ h4 {
 .myText {
   font-family: 'EB Garamond', serif;
   font-size: 1px;
-  text-align: center;
+  text-align: left;
   color: #5C5C5C;
   margin: auto;
-  padding-top: -70px;
-  padding-right: 200px;
-  padding-left: 200px;
+  padding-top: -100px;
+  padding-right: 180px;
+  padding-left: 180px;
 }
 
 #myContactHeader {
@@ -109,7 +109,7 @@ p {
 }
 
 .nav1 a:visited {
-  color: #BDE0FE;
+  color: #415A77;
 }
 
 .nav2 {
@@ -130,7 +130,7 @@ p {
 }
 
 .nav2 a:visited {
-  color: #BDE0FE;
+  color: #415A77;
 }
 
 .splash img {
@@ -252,4 +252,49 @@ footer {
   color: #9FAABC;
   margin-top: 150px;
   margin-bottom: 20px;
+}
+
+.gallery-container-a,.gallery-container-b {
+  margin: auto;
+  max-width: 1000px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 10px;
+}
+
+.gallery-item-a, .gallery-item-b {
+  padding: 10px;
+  text-align: center;
+  flex: 1 1 auto;
+}
+
+.gallery-container-a img:hover {
+	opacity: 0.5;
+}
+
+a {
+  color: #B8C0FF;
+}
+
+a:hover, a:visited:hover {
+  color: #5C6FFF;
+}
+
+a:visited {
+  color: #415A77;
+}
+
+.nav-1 {
+  margin: auto;
+  text-align: center;
+  padding-bottom: 20px;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.nav-1 a {
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
 }

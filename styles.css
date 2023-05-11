@@ -153,33 +153,6 @@ p {
   opacity: 0.5;
 }
 
-.ando {
-  margin: auto;
-  max-width: 1000%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-content: center;
-  align-items: center;
-  padding: 0px;
-}
-
-.ando-big {
-  max-width: 500%;
-  height: 50%;
-  padding: 10px;
-  text-align: center;
-  flex: 33% 10% auto;
-}
-
-.ando-small {
-  max-width: 100%;
-  height: auto;
-  padding: 10px;
-  text-align: center;
-  flex: 33% 10% auto;
-}
-
 .poster {
   margin: auto;
   max-width: 1000%;

@@ -59,16 +59,6 @@ iframe {
   height: 450px;
 }
 
-#myContactHeader {
-  font-family: 'EB Garamond', serif;
-  font-size: 20px;
-  text-align: left;
-  color: #5C5C5C;
-  margin: auto;
-  padding-left: 200px;
-  padding-top: 50px;
-}
-
 #myHeader1 {
   font-size: 40px;
   text-shadow: 1px 1px #0e2a44;
@@ -249,13 +239,27 @@ p {
   padding-top: 100px;
 }
 
+#abouttext {
+  text-align: center;
+  padding-left: 200px;
+  padding-right: 200px;
+  font-size: 20px;
+  color: #5C5C5C;
+}
+
 footer {
   text-align: center;
   font-family: 'EB Garamond', serif;
   font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   color: #9FAABC;
-  margin-top: 150px;
-  margin-bottom: 20px;
+}
+
+.footer,
+.push {
+  height: 50px;
 }
 
 .gallery-container-a,.gallery-container-b {
@@ -265,6 +269,11 @@ footer {
   flex-wrap: wrap;
   justify-content: center;
   padding: 10px;
+}
+
+.gallery-item-a {
+  padding-bottom: 50px;
+  flex: 1;
 }
 
 .gallery-item-a, .gallery-item-b {

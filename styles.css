@@ -13,80 +13,93 @@ body {
 h1 {
   font-family: 'PT Serif', serif;
   font-size: 25px;
-  text-shadow: 2px 2px #036DC9;
+  text-shadow: 1px 1px #0e2a44;
   position: relative;
   left: 10px;
   top: 1px;
   padding: 20px;
-  color: #BDE0FE;
+  color: #8ab3d6;
 }
 
 h2 {
-  color: #BDE0FE;
+  color: #8ab3d6;
   text-align: center;
 }
 
 h3 {
   font-size: 40px;
-  text-shadow: 2px 2px #036DC9;
-  color: #BDE0FE;
+  text-shadow: 1px 1px #0e2a44;
+  color: #8ab3d6;
   text-align: center;
 }
 
 h4 {
   font-family: 'PT Serif', serif;
   font-size: 25px;
-  text-shadow: 2px 2px #036DC9;
+  text-shadow: 1px 1px #0e2a44;
   position: relative;
-  text-align: center;
-  left: 10px;
-  top: 1px;
-  padding: 20px;
-  color: #BDE0FE;
+  text-align: left;
+  color: #8ab3d6;
+  padding-left: 200px;
+  padding-top: 50px;
 }
 
-.myText {
-  font-family: 'EB Garamond', serif;
-  font-size: 1px;
-  text-align: left;
-  color: #5C5C5C;
-  margin: auto;
-  padding-top: -100px;
-  padding-right: 200px;
-  padding-left: 200px;
+h5 {
+  font-family: 'PT Serif', serif;
+  font-size: 25px;
+  text-shadow: 1px 1px #0e2a44;
+  position: relative;
+  text-align: center;
+  color: #8ab3d6;
 }
 
 #myContactHeader {
   font-family: 'EB Garamond', serif;
   font-size: 20px;
-  padding: 5px;
-  text-align: center;
+  text-align: left;
   color: #5C5C5C;
   margin: auto;
+  padding-left: 200px;
+  padding-top: 50px;
 }
 
 #myHeader1 {
   font-size: 40px;
-  text-shadow: 2px 2px #5C6FFF;
-  color: #B8C0FF;
-  text-align: center;
+  text-shadow: 1px 1px #0e2a44;
+  color: #8ab3d6;
+  text-align: left;
+  padding-right: 500px;
+  padding-left: 200px;
 }
 
 #myHeader2 {
   font-size: 40px;
   padding-top: 10px;
-  text-shadow: 2px 2px #5C6FFF;
-  color: #B8C0FF;
-  text-align: center;
+  text-shadow: 1px 1px #0e2a44;
+  color: #8ab3d6;
+  text-align: left;
+  padding-right: 500px;
+  padding-left: 200px;
 }
 
 p {
   font-family: 'EB Garamond', serif;
   font-size: 25px;
   text-align: center;
-  color: #5C5C5C;
+  color: #242424;
   margin: auto;
   padding-top: 50px;
+}
+
+.myText p {
+  font-family: 'EB Garamond', serif;
+  font-size: 20px;
+  text-align: left;
+  color: #5C5C5C;
+  margin: auto;
+  padding-top: -100px;
+  padding-right: 500px;
+  padding-left: 200px;
 }
 
 .nav1 {
@@ -121,7 +134,6 @@ p {
   transform-style: preserve-3d;
   justify-content: space-evenly;
   position: relative;
-  z-index: 2;
   margin: 0px auto;
   perspective: 2000px;
   flex-wrap: wrap;
@@ -142,31 +154,9 @@ p {
 
 .nav2 a:link, .nav2 a:visited {
   color: inherit;
-  color: #ff0000;
+  color: #6f6f6f;
   text-decoration: none;
 }
-
-p.navigation {position:absolute;
-  margin-left: 800px;
-  margin-top: 45px;}
-a.current:link, a.current:visited, a.current:hover, a.current:active 
-{color: lightgreen;
-padding: 20px 20px 0px 20px;
-border: 0.5px solid lightgreen;
-border-radius: 70px 70px 0px 0px;} 
-
-a.navigation:link {color: white;
-text-decoration: none;
-padding: 20px 20px 20px 20px;
-border: 0.5px solid white;
-border-radius: 70px 70px;}
-
-a.navigation:visited, a.navigation:hover, 
-a.navigation:active 
-{color: lightgreen;
-padding: 20px 20px 0px 20px;
-border: 0.5px solid lightgreen;
-border-radius: 70px 70px 0px 0px;}
 
 .splash img {
   display: block;

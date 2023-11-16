@@ -6,7 +6,7 @@ body {
   background-size: 40px 40px;
   background-image: radial-gradient(circle, #C3CAD5 1px, rgba(0, 0, 0, 0) 1px);
   font-family: 'PT Serif', serif;
-  background-color: #FFFEE4;
+  background-color: #f5f5f3;
   color: #212529;
 }
 
@@ -104,6 +104,7 @@ p {
 
 .nav1 a {
   color: #5C5C5C;
+  text-decoration: none;
 }
 
 .nav1 a:visited {
@@ -112,24 +113,60 @@ p {
 
 .nav2 {
   margin: auto;
-  text-align: left;
-  padding-top: 60px;
-  padding-bottom: 20px;
-  position: fixed;
-  top: 100px;
-  left: 50px;
-  max-width: 15%;
+  text-align: center;
+  max-width: 70%;
+  padding-bottom: 80px;
+  font-size: 19px;
+  display: flex;
+  transform-style: preserve-3d;
+  justify-content: space-evenly;
+  position: relative;
+  z-index: 2;
+  margin: 0px auto;
+  perspective: 2000px;
+  flex-wrap: wrap;
+  top: 3em;
 }
 
 .nav2 a {
   display: block;
-  color: #5C5C5C;
+  color: #415A77;
+  text-decoration: none;
   padding-bottom: 10px;
 }
 
-.nav2 a:visited {
+.nav2 a:active, .nav2 a:hover {
   color: #415A77;
+  border-bottom: 3px solid #415A77;
 }
+
+.nav2 a:link, .nav2 a:visited {
+  color: inherit;
+  color: #ff0000;
+  text-decoration: none;
+}
+
+p.navigation {position:absolute;
+  margin-left: 800px;
+  margin-top: 45px;}
+a.current:link, a.current:visited, a.current:hover, a.current:active 
+{color: lightgreen;
+padding: 20px 20px 0px 20px;
+border: 0.5px solid lightgreen;
+border-radius: 70px 70px 0px 0px;} 
+
+a.navigation:link {color: white;
+text-decoration: none;
+padding: 20px 20px 20px 20px;
+border: 0.5px solid white;
+border-radius: 70px 70px;}
+
+a.navigation:visited, a.navigation:hover, 
+a.navigation:active 
+{color: lightgreen;
+padding: 20px 20px 0px 20px;
+border: 0.5px solid lightgreen;
+border-radius: 70px 70px 0px 0px;}
 
 .splash img {
   display: block;

@@ -26,8 +26,6 @@ p {
   position: relative;
   text-align: left;
   padding-top: 50px;
-  max-width: 1000px;
-
 }
 
 #abouttext {
@@ -293,7 +291,6 @@ a:visited {
 
 .gallery-item-c {
   padding-bottom: 50px;
-  /* padding-left: 200px; */
   flex: 1;
   text-align: left;
 }

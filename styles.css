@@ -78,7 +78,7 @@ h5 {
   /* text-shadow: 1px 1px #0e2a44; */
   position: relative;
   text-align: left;
-  color: #1B537E;
+  color: #394B74;
 }
 
 #myHeader1 {
@@ -130,6 +130,10 @@ h5 {
   font-size: 30px;
 }
 
+#resumesub {
+  color:#394B74;
+  font-size: 30px;
+}
 /* ------------------------------------------------------ */
 
 iframe {
@@ -272,14 +276,20 @@ a:visited {
 
 .gallery-container-c {
   margin: auto;
-  max-width: 400px;
+  max-width: 600px;
   display: flex;
   position: static;
-  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: center;
   padding: 10px;
   padding-top: 100px;
   padding-bottom: 30px;
+}
+
+img {
+  max-width: 600px;
+  margin-inline: 0;
+  object-fit: cover;
 }
 
 .gallery-item-a {
@@ -293,6 +303,9 @@ a:visited {
   padding-bottom: 50px;
   flex: 1;
   text-align: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 

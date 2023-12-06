@@ -94,6 +94,8 @@ h5 {
   color: #394B74;
 }
 
+/* ------------------------------------------------------ */
+
 #myHeader1 {
   font-size: 40px;
   color: #394B74;
@@ -166,34 +168,6 @@ h5 {
 
 #moclo {
   color:#B98262;
-}
-
-/* ------------------------------------------------------ */
-
-iframe {
-  border: none;
-  width: 700px;
-  height: 800px;;
-}
-
-#web1 {
-  width: 800px;
-  height: 800px;;
-}
-
-#web2 {
-  width: 1200px;
-  height: 950px;;
-}
-
-#web3 {
-  width: 1800px;
-  height: 900px;;
-}
-
-#video {
-  width: 560px;
-  height: 315px;
 }
 
 /* ------------------------------------------------------ */
@@ -281,6 +255,34 @@ a:visited {
 
 /* ------------------------------------------------------ */
 
+iframe {
+  border: none;
+  width: 700px;
+  height: 800px;;
+}
+
+#web1 {
+  width: 800px;
+  height: 800px;;
+}
+
+#web2 {
+  width: 1200px;
+  height: 950px;;
+}
+
+#web3 {
+  width: 1800px;
+  height: 900px;;
+}
+
+#video {
+  width: 560px;
+  height: 315px;
+}
+
+/* ------------------------------------------------------ */
+
 .splash img {
   margin: auto;
   max-width: 1000px;
@@ -315,6 +317,10 @@ a:visited {
   padding: 30px;
 }
 
+img {
+  margin-inline: 0;
+  object-fit: cover;
+}
 /* ------------------------------------------------------ */
 
 .gallery-container-a,.gallery-container-b {
@@ -349,11 +355,6 @@ a:visited {
   justify-content: center;
   padding: 10px;
   padding-bottom: 30px;
-}
-
-img {
-  margin-inline: 0;
-  object-fit: cover;
 }
 
 .gallery-item-a {
@@ -431,6 +432,8 @@ img {
       margin: 0 auto;
     }
   }
+
+
   /* ------------------------------------------------------ */
   footer {
   text-align: center;
@@ -445,60 +448,3 @@ img {
 }
 
   /* ------------------------------------------------------ */
-/*Responsive*/
-
-@media (max-width: 700px) {
-  .topnav {
-    flex-direction: column;
-    flex-wrap: wrap;
-  }
-
-  .topnav a{
-    margin: auto;
-    width: 100%;
-  }
-
-  .topnav div {
-    display: flex;
-    margin: auto;
-    width: 100%;
-    padding: 0px;
-  }
-
-  #gallery:hover #gal-list{
-    display: none;
-  }
-
-  .footer {
-    margin: auto;
-    text-align: center;
-  }
-
-  .content {
-    width: 95%;
-    padding: 2.5%;
-  }
-
-  .bio-left {
-    flex: 100%;
-  }
-
-  .bio-left img {
-    margin: auto;
-  }
-
-  .bio-right {
-    flex: 100%;
-  }
-
-  .gal-item {
-    flex: 100%;
-  }
-
-  .hero-overlay {
-    font-size: 20px;
-    margin-left: 25px;
-    margin-bottom: 50px;
-    width: auto;
-  }
-}

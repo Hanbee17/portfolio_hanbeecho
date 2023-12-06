@@ -52,20 +52,43 @@ p {
 
 /* ------------------------------------------------------ */
 
-h1 {
+h1{
   font-family: 'Fira Sans', sans-serif;
-  font-size: 25px;
-
+  font-size: 35px;
   position: relative;
   left: 10px;
   top: 1px;
   padding: 20px;
-  color: #394B74;
+	text-align: left;
 }
+
+.knockout {
+  background-image: linear-gradient(to right, #394B74, #1E4B5C, #9fcffe, #3E2850);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  background-position: -100%;
+  background-size: 400%;
+
+  animation: animateText 10s infinite alternate-reverse;
+
+}
+
+@keyframes animateText {
+  from {
+      background-position: 0;
+  }
+
+  to {
+      background-position: 100%;
+  }
+}
+/* ------------------------------------------------------ */
 
 h2 {
   color: #394B74;
   text-align: center;
+  padding-top: 40px;
 }
 
 h3 {
@@ -153,7 +176,7 @@ h5 {
 }
 
 #tkdsub {
-  color:#1F6A86;
+  color:#727c80;
   font-size: 30px;
 }
 
@@ -192,27 +215,15 @@ a:hover {
 
 a:visited {
   color: #5C5C5C;
-}
-
-.nav-1 {
-  margin: auto;
-  text-align: center;
-  padding-bottom: 20px;
-  font-size: 18px;
-  margin-bottom: 10px;
-}
-
-.nav-1 a {
-  padding-top: 20px;
-  padding-left: 20px;
-  padding-right: 20px;
+  text-decoration: none;
 }
 
 .nav1 {
   display: block;
   margin: auto;
   text-align: right;
-  font-size: 16px;
+  font-size: 20px;
+  text-decoration: none;
   padding-left: 20px;
   padding-bottom: 20px;
   position: absolute;
@@ -223,6 +234,7 @@ a:visited {
 
 .nav1 a:visited {
   color: #5C5C5C;
+  text-decoration: none;
 }
 
 .nav2 {
@@ -256,8 +268,8 @@ a:visited {
 /* ------------------------------------------------------ */
 
 .arrowR {
-	width: 6vmin;
-	height: 6vmin;
+	width: 3vmin;
+	height: 3vmin;
 	box-sizing: border-box;
   position: -webkit-sticky;
   position: sticky;
@@ -306,8 +318,8 @@ a:visited {
 }
 
 .arrowL {
-	width: 6vmin;
-	height: 6vmin;
+	width: 3vmin;
+	height: 3vmin;
 	box-sizing: border-box;
   position: -webkit-sticky;
   position: sticky;
@@ -378,8 +390,8 @@ iframe {
 }
 
 #video {
-  width: 560px;
-  height: 315px;
+  width: 1120px;
+  height: 630px;
 }
 
 /* ------------------------------------------------------ */
@@ -430,8 +442,10 @@ img {
   display: flex;
   position: static;
   flex-wrap: wrap;
-  justify-content: left;
-  padding: 10px;
+  gap: 1ppx;
+  justify-content: start;
+  align-content: space-evenly;
+  flex-grow: 1;
   padding-bottom: 30px;
 }
 

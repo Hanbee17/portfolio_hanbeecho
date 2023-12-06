@@ -1,6 +1,6 @@
 # Hanbee Cho Portfolio
 
-Live Website: [click](https://hanbee17.github.io/portfolio_hanbeecho/){:target="_blank"}  
+Live Website: [Click](https://hanbee17.github.io/portfolio_hanbeecho/)
 
+Resume: [Click](https://github.com/Hanbee17/portfolio_hanbeecho/blob/main/assets/resume.jpg)
 
-[Opens in new tab](https://external.ink?to=/placeholder.com)

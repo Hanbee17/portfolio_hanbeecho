@@ -1,5 +1,5 @@
 # Hanbee Cho Portfolio
 
-Live Website: [click](https://hanbee17.github.io/portfolio_hanbeecho/)
+Live Website: [click](https://hanbee17.github.io/portfolio_hanbeecho/) {:target="_blank"}  
 
 

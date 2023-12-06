@@ -164,6 +164,12 @@ iframe {
   height: 800px;
 }
 
+#web {
+  border: none;
+  width: 2500px;
+  height: 1000px;
+}
+
 /* ------------------------------------------------------ */
 a {
   font-weight: bold;

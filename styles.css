@@ -192,6 +192,8 @@ h5 {
   font-size: 30px;
 }
 
+
+
 #dittox {
   color:#3E2850;
 }
@@ -495,6 +497,13 @@ img {
   align-items: center;
 }
 
+.gallery-item-d {
+  padding-top: 20px;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .gallery-item-a, .gallery-item-b {
   text-align: left;
@@ -572,9 +581,9 @@ img {
   ul li a {
     display:block;
     position:relative;
-    width:70px;
-    height:70px;
-    line-height:70px;
+    width:55px;
+    height:55px;
+    line-height:55px;
     font-size:40px;
     text-align:center;
     text-decoration:none;
@@ -676,6 +685,13 @@ img {
   }
   ul li a:hover:nth-child(4) {
     color: #dd4b39;
+  }
+
+  #socialmediasub {
+    text-align: center;
+    font-size: 15px;
+    padding-top: 10px;
+    color: #394B74;
   }
 
   /* ------------------------------------------------------ */

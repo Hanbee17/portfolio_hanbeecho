@@ -8,7 +8,6 @@ body {
   /* background-image: radial-gradient(circle, #C3CAD5 1px, rgba(0, 0, 0, 0) 1px); */
   font-family: 'Fira Sans', sans-serif;
   background-color: #eef6fc;
-  /* color: #212529; */
 }
 
 p {
@@ -208,7 +207,7 @@ a {
   font-weight: bold;
   --s: 0.2em;   /* the thickness of the line */
   --c: #394B74; /* the color */
-  color: #D05D66;
+  color: #FFD60A;
   padding-bottom: var(--s);
   background: 
     linear-gradient(90deg,var(--c) 50%,#394B74 0) calc(100% - var(--_p,0%))/200% 100%,
@@ -581,7 +580,7 @@ img {
     font-size:40px;
     text-align:center;
     text-decoration:none;
-    color:#404040;
+    color:#394B74;
     margin: 0 30px;
     transition:.5s;
   }
@@ -593,7 +592,7 @@ img {
   ul li a span:nth-child(3){
     width:100%;
     height:3px;
-    background:#404040;
+    background:#394B74;
   }
   ul li a span:nth-child(1) {
     top:0;
@@ -621,7 +620,7 @@ img {
   ul li a span:nth-child(4){
     width:3px;
     height:100%;
-    background:#404040;
+    background:#5C5C5C;
   }
   ul li a span:nth-child(2) {
     top:0;
@@ -679,6 +678,100 @@ img {
   }
   ul li a:hover:nth-child(4) {
     color: #dd4b39;
+  }
+
+  /* ------------------------------------------------------ */
+
+  .type--C{
+    --line_color : #394B74 ;
+    --back_color : #eef6fc 
+  }
+  
+  .button{
+      position : relative ;
+      z-index : 0 ;
+      width : 240px ;
+      height : 56px ;
+      text-decoration : none ;
+      font-size : 14px ; 
+      font-weight : bold ;
+      color : var(--line_color) ;
+      letter-spacing : 2px ;
+      transition : all .3s ease ;
+      align-items: center;
+      justify-content: center;
+  }
+  .button__text{
+      display : flex ;
+      justify-content : center ;
+      align-items : center ;
+      width : 100% ;
+      height : 100% ;
+  }
+  .button::before,
+  .button::after,
+  .button__text::before,
+  .button__text::after{
+      content : '' ;
+      position : absolute ;
+      height : 3px ;
+      border-radius : 2px ;
+      background : var(--line_color) ;
+      transition : all .5s ease ;
+  }
+  .button::before{
+      top : 0 ;
+      left : 54px ;
+      width : calc( 100% - 56px * 2 - 16px ) ;
+  }
+  .button::after{
+      top : 0 ;
+      right : 54px ;
+      width : 8px ;
+  }
+  .button__text::before{
+      bottom : 0 ;
+      right : 54px ;
+      width : calc( 100% - 56px * 2 - 16px ) ;
+  }
+  .button__text::after{
+      bottom : 0 ;
+      left : 54px ;
+      width : 8px ;
+  }
+  .button__line{
+      position : absolute ;
+      top : 0 ;
+      width : 56px ;
+      height : 100% ;
+      overflow : hidden ;
+  }
+  .button__line::before{
+      content : '' ;
+      position : absolute ;
+      top : 0 ;
+      width : 150% ;
+      height : 100% ;
+      box-sizing : border-box ;
+      border-radius : 300px ;
+      border : solid 3px var(--line_color) ;
+  }
+  .button__line:nth-child(1),
+  .button__line:nth-child(1)::before{
+      left : 0 ;
+  }
+  .button__line:nth-child(2),
+  .button__line:nth-child(2)::before{
+      right : 0 ;
+  }
+  
+  .button:hover::before,
+  .button:hover .button__text::before{
+      width : 8px ;
+  }
+  .button:hover::after,
+  .button:hover .button__text::after{
+      width : calc( 100% - 56px * 2 - 16px ) ;
   }
 
   /* ------------------------------------------------------ */

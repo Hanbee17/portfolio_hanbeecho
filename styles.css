@@ -444,9 +444,9 @@ img {
   display: flex;
   position: static;
   flex-wrap: wrap;
-  gap: 1ppx;
+  gap: 10px;
   justify-content: start;
-  align-content: space-evenly;
+  align-content: space-between;
   flex-grow: 1;
   padding-bottom: 30px;
 }

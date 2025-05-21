@@ -5,6 +5,7 @@ body {
   /* background-image: radial-gradient(circle, #C3CAD5 1px, rgba(0, 0, 0, 0) 1px); */
   font-family: 'Fira Sans', sans-serif;
   background-color: #eef6fc;
+  margin: 5%
 }
 
 p {
@@ -54,8 +55,8 @@ h1{
   font-size: 35px;
   position: relative;
   top: 10px;
-  padding-bottom: 20px;
-	text-align: left;
+  padding-bottom: 50px;
+	text-align: center;
 }
 
 .knockout {
@@ -93,7 +94,6 @@ h3 {
 h4 {
   font-family: 'Fira Sans', sans-serif;
   font-size: 25px;
-
   position: relative;
   padding-right: 1000px;
   text-align: left;
@@ -125,7 +125,7 @@ h5 {
   padding-top: 10px;
   color: #394B74;
   text-align: left;
-  margin-right: 700px;
+  margin-right: 500px;
 }
 
 #ando {
@@ -210,19 +210,28 @@ h5 {
   font-size: 30px;
 }
 
+#mygen {
+  color:#236bb3
+}
+
+#mygensub {
+  color:#236bb3;
+  font-size: 30px;
+}
+
+#kki {
+  color:#060506
+}
+
+#kkisub {
+  color:#060506;
+  font-size: 30px;
+}
+
 /* ------------------------------------------------------ */
 a {
   font-weight: bold;
-  --s: 0.2em;   /* the thickness of the line */
-  --c: #394B74; /* the color */
   color: #394B74;
-  padding-bottom: var(--s);
-  background: 
-    linear-gradient(90deg,var(--c) 50%,#394B74 0) calc(100% - var(--_p,0%))/200% 100%,
-    linear-gradient(var(--c) 0 0) 0% 100%/var(--_p,0%) var(--s) no-repeat;
-  -webkit-background-clip: text,padding-box;
-          background-clip: text,padding-box;
-  transition: 0.5s;
   text-decoration: none;
 }
 
@@ -237,20 +246,38 @@ a:visited {
 }
 
 .nav1 {
-  display: block;
-  margin: auto;
-  text-align: right;
-  font-size: 18px;
+  color: #394B74;
   text-decoration: none;
-  padding-bottom: 20px;
-  position: absolute;
-  top: 40px;
-  right: 20px;
+  margin: auto;
+  text-align: center;
+  max-width: 400px;
+  font-size: 18px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  position: relative;
+  gap: 5px;
+  margin: 10px auto;
+  padding: 10px;
 }
 
 .nav1 a:visited {
   color: #5C5C5C;
   text-decoration: none;
+}
+
+/* Add a media query for smaller screens */
+@media screen and (max-width: 768px) {
+  .nav1 {
+    position: static; /* Removes absolute positioning */
+    text-align: center; /* Centers the navigation links */
+    margin-top: 20px; /* Adds spacing below the title */
+  }
+
+  h1 {
+    text-align: center; /* Centers the title for smaller screens */
+  }
 }
 
 .nav2 {
@@ -278,6 +305,15 @@ a:visited {
   color: inherit;
   color: #5C5C5C;
   text-decoration: none;
+}
+
+/* Add a media query for smaller screens */
+@media screen and (max-width: 768px) {
+  .nav2 {
+    flex-direction: column; /* Stack the links vertically */
+    gap: 10px; /* Add spacing between the links */
+    font-size: 16px; /* Adjust font size for better readability */
+  }
 }
 
 /* ------------------------------------------------------ */
@@ -478,8 +514,15 @@ img {
   flex-direction: column;
   justify-content: center;
   padding: 10px;
-  padding-top: 100px;
+  padding-top: 20px;
   padding-bottom: 30px;
+}
+
+.responsive-img {
+  max-width: 100%; /* Ensures the image does not exceed the container's width */
+  height: auto; /* Maintains the aspect ratio */
+  object-fit: contain; /* Ensures the image fits within the container without cropping */
+  display: block; /* Removes extra space below the image */
 }
 
 .gallery-container-d {

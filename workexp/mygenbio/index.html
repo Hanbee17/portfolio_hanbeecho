@@ -1,6 +1,52 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
+<script>
+  function openLightbox(lightboxId) {
+    document.getElementById(lightboxId).style.display = "flex";
+    showSlide(1, lightboxId);
+  }
+
+  function closeLightbox(lightboxId) {
+    document.getElementById(lightboxId).style.display = "none";
+  }
+
+  function changeSlide(n, lightboxId) {
+    const lightbox = document.getElementById(lightboxId);
+    const slides = lightbox.getElementsByClassName("lightbox-slide");
+    let slideIndex = parseInt(lightbox.getAttribute("data-slide-index")) || 1;
+
+    slideIndex += n;
+    if (slideIndex > slides.length) {
+      slideIndex = 1;
+    }
+    if (slideIndex < 1) {
+      slideIndex = slides.length;
+    }
+
+    lightbox.setAttribute("data-slide-index", slideIndex);
+    showSlide(slideIndex, lightboxId);
+  }
+
+  function showSlide(n, lightboxId) {
+    const lightbox = document.getElementById(lightboxId);
+    const slides = lightbox.getElementsByClassName("lightbox-slide");
+
+    for (let i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    slides[n - 1].style.display = "block";
+  }
+
+  function changeMainImage(src, slideIndex, lightboxId) {
+    const mainImage = document.getElementById("current-image");
+    mainImage.src = src;
+    const lightbox = document.getElementById(lightboxId);
+    lightbox.setAttribute("data-slide-index", slideIndex);
+    showSlide(slideIndex, lightboxId);
+  }
+</script>
+
 <head>
   <meta charset="utf-8">
   <title></title>
@@ -22,7 +68,16 @@
       <h3 id="mygen">MyGenBio Inc.</h3>
 
       <div class="gallery-item-c">
-          <img src="../../mygen_assets/logo2.png" alt="Poster"  class="responsive-img">
+          <img src="../../mygen_assets/logo2.png" alt="Poster" width="400px" height="300px" class="responsive-img">
+    </div>
+
+    <div class="myText">
+      <p>
+        MyGenBio is a California-based health tech company specializing in AI-driven supplements and digital wellness solutions.
+        Their core innovation, BNO supplements, enhances nitric oxide production using natural ingredients to support cardiovascular and cognitive health.
+        Through their MYGENBIO Dashboard App, they offer personalized health tracking and recommendations to promote lifelong well-being.        
+       <br><br>
+      </p>
     </div>
 
     <div class="myText">
@@ -38,17 +93,159 @@
   <h3 id="mygensub">Digital Works</h3>
 
       <div class="gallery-item-c">
-          <!-- <img id="image_shadow" src="../../../graphicdesign_assets/ando3.png" alt="Poster" width="900px" height="533.5px"> -->
+          <img id="image_shadow" src="../../mygen_assets/web1.png" alt="Poster" width="1000px" height="500px">
       </div>
 
-    <h3 id="mygensub">Printing Works</h3>
+      <div class="gallery-item-c">
+        <img id="image_shadow" src="../../mygen_assets/web4.png" alt="Poster" width="1000px" height="500px">
+    </div>
 
     <div class="gallery-item-c">
-      <!-- <img id="image_shadow" src="../../../graphicdesign_assets/ando3.png" alt="Poster" width="900px" height="533.5px"> -->
+      <img id="image_shadow" src="../../mygen_assets/app1.png" alt="Poster" width="1000px" height="667.5px">
   </div>
-  
 
+  <div class="gallery-item-c">
+    <img id="image_shadow" src="../../mygen_assets/app3.png" alt="Poster" width="1000px" height="667.5px">
+</div>
+</div>
+</div>
+
+<div class="main-image">
+  <img id="current-image" src="../../mygen_assets/social6.png" alt="Main Image" onclick="openLightbox('lightbox')">
+</div>
+
+<div class="thumbnail-gallery">
+  <div class="thumbnail-item">
+    <img src="../../mygen_assets/social6.png" alt="Thumbnail 1" onclick="changeMainImage('../../mygen_assets/social6.png', 1, 'lightbox')">
+  </div>
+  <div class="thumbnail-item">
+    <img src="../../mygen_assets/social4.png" alt="Thumbnail 2" onclick="changeMainImage('../../mygen_assets/social4.png', 2, 'lightbox')">
+  </div>
+  <div class="thumbnail-item">
+    <img src="../../mygen_assets/social2.png" alt="Thumbnail 3" onclick="changeMainImage('../../mygen_assets/social2.png', 3, 'lightbox')">
+  </div>
+</div>
+
+<div id="lightbox" class="lightbox" data-slide-index="1">
+  <span class="close" onclick="closeLightbox('lightbox')">&times;</span>
+  <div class="lightbox-content">
+    <div class="lightbox-slide">
+      <img src="../../mygen_assets/social6.png" alt="Image 1">
     </div>
+    <div class="lightbox-slide">
+      <img src="../../mygen_assets/social4.png" alt="Image 2">
+    </div>
+    <div class="lightbox-slide">
+      <img src="../../mygen_assets/social2.png" alt="Image 3">
+    </div>
+    <a class="prev" onclick="changeSlide(-1, 'lightbox')">&#10094;</a>
+    <a class="next" onclick="changeSlide(1, 'lightbox')">&#10095;</a>
+  </div>
+</div>
+
+<h3 id="mygensub">Packaging Works</h3>
+<br>
+
+<div class="packaging-works">
+<div class="main-image">
+  <img id="current-image" src="../../mygen_assets/bnos1.png" alt="Main Image" onclick="openLightbox('lightbox-packaging')">
+</div>
+
+<div class="thumbnail-gallery">
+  <div class="thumbnail-item">
+    <img src="../../mygen_assets/bnos1.png" alt="Thumbnail 1" onclick="changeMainImage('../../mygen_assets/bnos1.png', 1, 'lightbox-packaging')">
+  </div>
+  <div class="thumbnail-item">
+    <img src="../../mygen_assets/bnos2.png" alt="Thumbnail 2" onclick="changeMainImage('../../mygen_assets/bnos2.png', 2, 'lightbox-packaging')">
+  </div>
+  <div class="thumbnail-item">
+    <img src="../../mygen_assets/bnos3.png" alt="Thumbnail 2" onclick="changeMainImage('../../mygen_assets/bnos3.png', 2, 'lightbox-packaging')">
+  </div>
+  <div class="thumbnail-item">
+    <img src="../../mygen_assets/bnos4.png" alt="Thumbnail 3" onclick="changeMainImage('../../mygen_assets/bnos4.png', 3, 'lightbox-packaging')">
+  </div>
+</div>
+
+<div id="lightbox-packaging" class="lightbox" data-slide-index="1">
+  <span class="close" onclick="closeLightbox('lightbox-packaging')">&times;</span>
+  <div class="lightbox-content">
+    <div class="lightbox-slide">
+      <img src="../../mygen_assets/bnos1.png" alt="Image 1">
+    </div>
+    <div class="lightbox-slide">
+      <img src="../../mygen_assets/bnos2.png" alt="Image 2">
+    </div>
+    <div class="lightbox-slide">
+      <img src="../../mygen_assets/bnos3.png" alt="Image 2">
+    </div>
+    <div class="lightbox-slide">
+      <img src="../../mygen_assets/bnos4.png" alt="Image 3">
+    </div>
+
+    <a class="prev" onclick="changeSlide(-1, 'lightbox-packaging')">&#10094;</a>
+    <a class="next" onclick="changeSlide(1, 'lightbox-packaging')">&#10095;</a>
+  </div>
+</div>
+</div>
+
+
+<h3 id="mygensub">Printing Works</h3>
+<br>
+
+<div class="printing-works">
+<div class="main-image">
+  <img id="current-image" src="../../mygen_assets/poster1.png" alt="Main Image" onclick="openLightbox('lightbox-printing')">
+</div>
+
+<div class="thumbnail-gallery">
+  <div class="thumbnail-item">
+    <img src="../../mygen_assets/poster1.png" alt="Thumbnail 1" onclick="changeMainImage('../../mygen_assets/poster1.png', 1, 'lightbox-printing')">
+  </div>
+  <div class="thumbnail-item">
+    <img src="../../mygen_assets/poster2.png" alt="Thumbnail 2" onclick="changeMainImage('../../mygen_assets/poster2.png', 2, 'lightbox-printing')">
+  </div>
+  <div class="thumbnail-item">
+    <img src="../../mygen_assets/poster3.jpg" alt="Thumbnail 2" onclick="changeMainImage('../../mygen_assets/poster3.jpg', 2, 'lightbox-printing')">
+  </div>
+  <div class="thumbnail-item">
+    <img src="../../mygen_assets/poster4.jpg" alt="Thumbnail 3" onclick="changeMainImage('../../mygen_assets/poster4.jpg', 3, 'lightbox-printing')">
+  </div>
+  <div class="thumbnail-item">
+    <img src="../../mygen_assets/poster5.jpg" alt="Thumbnail 3" onclick="changeMainImage('../../mygen_assets/poster5.jpg', 4, 'lightbox-printing')">
+  </div>
+  <div class="thumbnail-item">
+    <img src="../../mygen_assets/poster6.jpg" alt="Thumbnail 3" onclick="changeMainImage('../../mygen_assets/poster6.jpg', 5, 'lightbox-printing')">
+  </div>
+</div>
+
+<div id="lightbox-printing" class="lightbox" data-slide-index="1">
+  <span class="close" onclick="closeLightbox('lightbox-printing')">&times;</span>
+  <div class="lightbox-content">
+    <div class="lightbox-slide">
+      <img src="../../mygen_assets/poster1.png" alt="Image 1">
+    </div>
+    <div class="lightbox-slide">
+      <img src="../../mygen_assets/poster2.png" alt="Image 2">
+    </div>
+    <div class="lightbox-slide">
+      <img src="../../mygen_assets/poster3.jpg" alt="Image 2">
+    </div>
+    <div class="lightbox-slide">
+      <img src="../../mygen_assets/poster4.jpg" alt="Image 3">
+    </div>
+    <div class="lightbox-slide">
+      <img src="../../mygen_assets/poster5.jpg" alt="Image 3">
+    </div>
+    <div class="lightbox-slide">
+      <img src="../../mygen_assets/poster6.jpg" alt="Image 3">
+    </div>
+    <a class="prev" onclick="changeSlide(-1, 'lightbox-printing')">&#10094;</a>
+    <a class="next" onclick="changeSlide(1, 'lightbox-printing')">&#10095;</a>
+  </div>
+</div>
+</div>
+
+
 
      <br>
      <h2>Other Works</h2>

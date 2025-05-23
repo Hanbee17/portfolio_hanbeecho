@@ -1,11 +1,45 @@
-window.onload = choosePic;
+console.log("script.js is loaded");
 
-var myPix = ['p1.jpg', 'p2.jpg', 'p3.jpg', 'p5.jpg', 'p6.jpg', 'p7.jpg', 'p8.jpg', 'p10.jpg','p13.png'];
+function openLightbox(lightboxId) {
+  document.getElementById(lightboxId).style.display = "flex";
+  showSlide(1, lightboxId);
+}
 
-function choosePic() {
-     var randomNum = Math.floor(Math.random() * myPix.length);
-     document.getElementById("myPicture").src = "photo_assets/" + myPix[randomNum];
-   }
+function closeLightbox(lightboxId) {
+  document.getElementById(lightboxId).style.display = "none";
+}
 
+function changeSlide(n, lightboxId) {
+  const lightbox = document.getElementById(lightboxId);
+  const slides = lightbox.getElementsByClassName("lightbox-slide");
+  let slideIndex = parseInt(lightbox.getAttribute("data-slide-index")) || 1;
 
-   
+  slideIndex += n;
+  if (slideIndex > slides.length) {
+    slideIndex = 1;
+  }
+  if (slideIndex < 1) {
+    slideIndex = slides.length;
+  }
+
+  lightbox.setAttribute("data-slide-index", slideIndex);
+  showSlide(slideIndex, lightboxId);
+}
+
+function showSlide(n, lightboxId) {
+  const lightbox = document.getElementById(lightboxId);
+  const slides = lightbox.getElementsByClassName("lightbox-slide");
+
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slides[n - 1].style.display = "block";
+}
+
+function changeMainImage(src, slideIndex, lightboxId) {
+  const mainImage = document.getElementById("current-image");
+  mainImage.src = src;
+  const lightbox = document.getElementById(lightboxId);
+  lightbox.setAttribute("data-slide-index", slideIndex);
+  showSlide(slideIndex, lightboxId);
+}

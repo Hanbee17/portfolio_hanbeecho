@@ -6,3 +6,6 @@ function choosePic() {
      var randomNum = Math.floor(Math.random() * myPix.length);
      document.getElementById("myPicture").src = "photo_assets/" + myPix[randomNum];
    }
+
+
+   

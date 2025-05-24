@@ -43,3 +43,21 @@ function changeMainImage(src, slideIndex, lightboxId) {
   lightbox.setAttribute("data-slide-index", slideIndex);
   showSlide(slideIndex, lightboxId);
 }
+
+// Show the button when the user scrolls down 100px
+window.onscroll = function () {
+  const scrollUpBtn = document.getElementById("scrollUpBtn");
+  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+    scrollUpBtn.style.display = "block";
+  } else {
+    scrollUpBtn.style.display = "none";
+  }
+};
+
+// Scroll to the top of the page when the button is clicked
+function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+}

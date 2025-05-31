@@ -30,7 +30,7 @@ p {
 /* ------------------------------------------------------ */
 /* Text Layout Styling */
 .text-layout {
-  max-width: 800px; /* Limit the width for better readability */
+  max-width: 1000px; /* Limit the width for better readability */
   margin: 50px auto; /* Center the layout and add spacing */
   padding: 20px;
   background-color: #f9f9f9; /* Light background for contrast */
@@ -41,8 +41,8 @@ p {
 
 .text-header {
   font-family: 'Fira Sans', sans-serif; /* Use your existing font */
-  font-size: 36px; /* Large font size for the header */
-  color: #394B74; /* Dark blue color */
+  font-size: 26px; /* Large font size for the header */
+  color: #236bb3; /* Dark blue color */
   margin-bottom: 20px; /* Add spacing below the header */
 }
 
@@ -52,6 +52,7 @@ p {
   line-height: 1.8; /* Increase line height for readability */
   color: #5C5C5C; /* Neutral gray color */
   margin: 0; /* Remove default margin */
+  text-align: left; /* Center-align the text */
 }
 
 /* ------------------------------------------------------ */
@@ -370,6 +371,64 @@ a:visited {
 
 /* ------------------------------------------------------ */
 
+.tabs-container {
+  width: 100%;
+  margin: 0 auto 40px auto;
+}
+.tabs-nav {
+  display: flex;
+  border-bottom: 2px solid #eee;
+  margin-bottom: 20px;
+}
+.tab-btn {
+  flex: 1;
+  padding: 14px 0;
+  background: none;
+  border: none;
+  color: #236bb3;
+  border-bottom: 2px solid transparent;
+  font-size: 1.1em;
+  font-family: 'Fira Sans', sans-serif;
+  cursor: pointer;
+  transition: border 0.3s, color 0.3s;
+}
+.tab-btn.active {
+  border-bottom: 2.5px solid #236bb3;
+  color: #236bb3;
+  font-weight: bold;
+}
+.tabs-content-wrapper {
+  position: relative;
+  overflow: visible; /* Allow content to flow naturally */
+  height: auto;
+}
+
+.tab-content {
+  display: none;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 0.5s;
+  position: static;
+}
+
+.tab-content.active {
+  display: block;
+  opacity: 1;
+  position: static;
+}
+
+/* Make images inside tab-content responsive */
+.tab-content img,
+.gallery-item-c img,
+.main-image img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+/* ------------------------------------------------------ */
+
 .arrowR {
   width: 3vmin;
   height: 3vmin;
@@ -504,6 +563,42 @@ a:visited {
 }
 
 /* ------------------------------------------------------ */
+/* app Works Styling */
+.app-works .main-image img {
+  width: 400px;
+}
+
+.app-works .lightbox-content {
+  position: relative;
+  max-width: 80%;
+  max-height: 90%;
+}
+
+.app-works .thumbnail-item img {
+  width: 100px;
+  height: 160px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+/* social Works Styling */
+.social-works .main-image img {
+  width: 600px;
+}
+
+.social-works .lightbox-content {
+  position: relative;
+  max-width: 40%;
+  max-height: 90%;
+}
+
+.social-works .thumbnail-item img {
+  width: 100px;
+  height: 160px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
 /* Printing Works Styling */
 .printing-works .main-image img {
   width: 600px;
@@ -574,40 +669,33 @@ a:visited {
 .lightbox {
   display: none;
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+  left: 0; top: 0; width: 100vw; height: 100vh;
+  background: rgba(0,0,0,0.8);
   justify-content: center;
   align-items: center;
-  z-index: 1000;
 }
-
-.lightbox-content {
+.lightbox .lightbox-content {
   position: relative;
-  max-width: 80%;
-  max-height: 80%;
+  margin: auto;
+  max-width: 90vw;
+  max-height: 90vh;
 }
-
 .lightbox-slide {
   display: none;
   text-align: center;
 }
-
 .lightbox-slide img {
-  max-width: 100%;
-  max-height: 100%;
+  max-width: 80vw;
+  max-height: 80vh;
 }
-
 .lightbox .close {
   position: absolute;
-  top: 20px;
-  right: 30px;
-  color: white;
+  top: 20px; right: 40px;
+  color: #fff;
   font-size: 40px;
-  font-weight: bold;
   cursor: pointer;
+  z-index: 1100;
 }
 
 .lightbox .prev,

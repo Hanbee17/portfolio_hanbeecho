@@ -5,11 +5,16 @@
   <meta charset="utf-8">
   <title></title>
   <link rel="stylesheet" href="../../../styles.css">
+      <script src="../../../photo.js"></script>
+
 </head>
 
 <body>
 
+
+<a href="../../../" class="knockout-link">
   <h1 class="knockout">Hanbee Cho</h1>
+</a>
   
   <nav class="nav1">
      | <a href="../../../">Portfolio</a> |
@@ -25,23 +30,42 @@
       </div>
     </main> -->
 
+           <h3 id="photo">Garden</h3>
 
-    <div class="wrapper">
-      <h3 id="photo">Garden</h3>
-      <div class="container">
-        <div class="big"><img  src="../../../photos_assets/film6.png" alt="Photography Image 2" ></div>
-        <div class="vertical"><img  src="../../../photos_assets/film4.png" alt="Photography Image 2" ></div>
-        <div><img src="../../../photos_assets/film5.png" alt="Photography Image 2" ></div>
-        <div class="big"><img   src="../../../photos_assets/film7.png" alt="Photography Image 2" ></div>
-        <div><img src="../../../photos_assets/film8.png" alt="Photography Image 2" ></div>
-        <div class="vertical"><img  src="../../../photos_assets/film18.png" alt="Photography Image 2" ></div>
-        <div><img  src="../../../photos_assets/film10.png" alt="Photography Image 2" ></div>
-        <div><img  src="../../../photos_assets/film11.png" alt="Photography Image 2" ></div>
-        <div class="big"><img src="../../../photos_assets/film9.png" alt="Photography Image 2" ></div>
-      </div>
-    </div>
 
-    <br>
+<div class="lights-puzzle-grid">
+  <div class="puzzle-item big"><img src="../../../photos_assets/film6.png" alt="Photo 1" onclick="changeMainImage('../../../photos_assets/film6.png', 1, 'garden-lightbox'); openLightbox('garden-lightbox')"></div>
+  <div class="puzzle-item vertical"><img src="../../../photos_assets/film4.png" alt="Photo 2" onclick="changeMainImage('../../../photos_assets/film4.png', 2, 'garden-lightbox'); openLightbox('garden-lightbox')"></div>
+   <div class="puzzle-item big"><img src="../../../photos_assets/film7.png" alt="Photo 4" onclick="changeMainImage('../../../photos_assets/film7.png', 4, 'garden-lightbox'); openLightbox('garden-lightbox')"></div>
+  <div class="puzzle-item"><img src="../../../photos_assets/film5.png" alt="Photo 3" onclick="changeMainImage('../../../photos_assets/film5.png', 3, 'garden-lightbox'); openLightbox('garden-lightbox')"></div>
+  <div class="puzzle-item"><img src="../../../photos_assets/film8.png" alt="Photo 5" onclick="changeMainImage('../../../photos_assets/film8.png', 5, 'garden-lightbox'); openLightbox('garden-lightbox')"></div>
+  <div class="puzzle-item vertical"><img src="../../../photos_assets/film18.png" alt="Photo 6" onclick="changeMainImage('../../../photos_assets/film18.png', 6, 'garden-lightbox'); openLightbox('garden-lightbox')"></div>
+  <div class="puzzle-item"><img src="../../../photos_assets/film10.png" alt="Photo 7" onclick="changeMainImage('../../../photos_assets/film10.png', 7, 'garden-lightbox'); openLightbox('garden-lightbox')"></div>
+  <div class="puzzle-item"><img src="../../../photos_assets/film11.png" alt="Photo 8" onclick="changeMainImage('../../../photos_assets/film11.png', 8, 'garden-lightbox'); openLightbox('garden-lightbox')"></div>
+  <div class="puzzle-item big"><img src="../../../photos_assets/film9.png" alt="Photo 9" onclick="changeMainImage('../../../photos_assets/film9.png', 9, 'garden-lightbox'); openLightbox('garden-lightbox')"></div>
+</div>
+
+<!-- Lightbox -->
+<div id="garden-lightbox" class="lights-lightbox" data-slide-index="1" style="display:none;">
+  <span class="lights-close" onclick="closeLightbox('garden-lightbox')">&times;</span>
+  <span class="lights-prev" onclick="changeSlide(-1, 'garden-lightbox')">&#10094;</span>
+  <span class="lights-next" onclick="changeSlide(1, 'garden-lightbox')">&#10095;</span>
+  <div class="lights-lightbox-content">
+    <div class="lights-lightbox-slide"><img src="../../../photos_assets/film6.png" alt="Image 1"></div>
+    <div class="lights-lightbox-slide"><img src="../../../photos_assets/film4.png" alt="Image 2"></div>
+    <div class="lights-lightbox-slide"><img src="../../../photos_assets/film5.png" alt="Image 3"></div>
+    <div class="lights-lightbox-slide"><img src="../../../photos_assets/film7.png" alt="Image 4"></div>
+    <div class="lights-lightbox-slide"><img src="../../../photos_assets/film8.png" alt="Image 5"></div>
+    <div class="lights-lightbox-slide"><img src="../../../photos_assets/film18.png" alt="Image 6"></div>
+    <div class="lights-lightbox-slide"><img src="../../../photos_assets/film10.png" alt="Image 7"></div>
+    <div class="lights-lightbox-slide"><img src="../../../photos_assets/film11.png" alt="Image 8"></div>
+    <div class="lights-lightbox-slide"><img src="../../../photos_assets/film9.png" alt="Image 9"></div>
+    <a class="lights-prev" onclick="changeSlide(-1, 'garden-lightbox')">&#10094;</a>
+    <a class="lights-next" onclick="changeSlide(1, 'garden-lightbox')">&#10095;</a>
+  </div>
+</div>
+
+    <!-- <br>
     <h2 >Other Works</h4>
     <nav class="nav2">
       |<a href="../../../">HOME</a> |
@@ -49,7 +73,8 @@
       <a href="../../graphicdesign/">Graphic Design</a>|
       <a href="../../dma/">Digital Art</a>|
       <a href="../">Photography</a>|
-    </nav>
+    </nav> -->
+<button id="scrollUpBtn" onclick="scrollToTop()">↑</button>
 
     <footer>
       © Hanbee Cho

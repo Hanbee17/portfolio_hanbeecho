@@ -93,12 +93,33 @@ h1{
 	text-align: center;
 }
 
+.knockout-link {
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+}
+
 .knockout {
-  background-image: linear-gradient(to right, #394B74, #1E4B5C, #9fcffe, #3E2850);
+  font-size: 45px;
+  background-image: linear-gradient(to right, #394B74, #1E4B5C, #9fcffe, #B17AE1);
   -webkit-background-clip: text;
   color: transparent;
   background-size: 400%;
   animation: animateText 10s infinite alternate-reverse;
+  transition: 
+    transform 0.3s cubic-bezier(.4,2,.6,1),
+    color 0.3s,
+    text-shadow 0.3s,
+    background-image 0.3s;
+}
+
+.knockout-link:hover .knockout {
+  transform: scale(1.05);
+  color: #B17AE1;
+  background-image: none;
+  text-shadow: 0 4px 4px #c9ade0;
 }
 
 @keyframes animateText {
@@ -285,20 +306,46 @@ a:hover {
   text-decoration: none;
 } */
 
+
 .nav1 {
-  text-decoration: none;
-  margin: auto;
-  text-align: center;
-  max-width: 600px;
-  font-size: 18px;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-  flex-direction: row;
-  position: relative;
-  gap: 5px;
-  margin: 10px auto;
+  gap: 20px;
+  font-size: 21px;
   padding: 10px;
+}
+
+.nav1 .nav-divider {
+  color: #010002;
+  font-weight: bold;
+  user-select: none;
+  pointer-events: none;
+}
+
+.nav1 a {
+  position: relative;
+  color: #B17AE1;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.nav1 a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 2px;
+  background: #B17AE1;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s;
+}
+
+.nav1 a:hover::after {
+  transform: scaleX(1);
 }
 
 /* Add a media query for smaller screens */
@@ -331,7 +378,7 @@ a:hover {
 }
 
 .nav2 a:active, .nav2 a:hover {
-  color: #394B74;
+  color: #B17AE1;
 }
 
 /* Add a media query for smaller screens */
@@ -447,14 +494,14 @@ a:hover {
   height: 100%;
   border-width: 0.8vmin 0.8vmin 0 0;
   border-style: solid;
-  border-color: #9FAABC;
+  border-color: #B17AE1;
   transition: 0.2s ease;
   display: block;
   transform-origin: 100% 0;
 }
 
 .arrowR:hover::before {
-  border-color: #394B74;
+  border-color: #B17AE1;
   transform: scale(0.8);
 }
 
@@ -467,31 +514,31 @@ a:hover {
   height: 100%;
   border-width: 0 0.8vmin 0 0;
   border-style: solid;
-  border-color: #9FAABC;
+  border-color: #B17AE1;
   transform-origin: 100% 0;
   transition: 0.2s ease;
 }
 
 .arrowR:hover::after {
   transform: rotate(45deg);
-  border-color: #394B74;
+  border-color: #B17AE1;
   height: 120%;
 }
 
 /* Add the "Next page" text on hover */
 .arrowR:hover::after {
   transform: rotate(45deg);
-  border-color: #394B74;
+  border-color: #B17AE1;
   height: 120%;
 }
 
 .arrowR:hover::before {
-  border-color: #394B74;
+  border-color: #B17AE1;
   transform: scale(.8);
 }
 .arrowR:hover::after {
   transform: rotate(45deg);
-  border-color: #394B74;
+  border-color: #B17AE1;
   height: 120%;
 }
 
@@ -514,14 +561,14 @@ a:hover {
   height: 100%;
   border-width: 0.8vmin 0.8vmin 0 0;
   border-style: solid;
-  border-color: #9FAABC;
+  border-color: #B17AE1;
   transition: 0.2s ease;
   display: block;
   transform-origin: 100% 0;
 }
 
 .arrowL:hover::before {
-  border-color: #394B74;
+  border-color: #B17AE1;
   transform: scale(0.8);
 }
 
@@ -534,31 +581,31 @@ a:hover {
   height: 100%;
   border-width: 0 0.8vmin 0 0;
   border-style: solid;
-  border-color: #9FAABC;
+  border-color: #B17AE1;
   transform-origin: 100% 0;
   transition: 0.2s ease;
 }
 
 .arrowL:hover::after {
   transform: rotate(45deg);
-  border-color: #394B74;
+  border-color: #B17AE1;
   height: 120%;
 }
 
 /* Add the "Next page" text on hover */
 .arrowL:hover::after {
   transform: rotate(45deg);
-  border-color: #394B74;
+  border-color: #B17AE1;
   height: 120%;
 }
 
 .arrowL:hover::before {
-  border-color: #394B74;
+  border-color: #B17AE1;
   transform: scale(.8);
 }
 .arrowL:hover::after {
   transform: rotate(45deg);
-  border-color: #394B74;
+  border-color: #B17AE1;
   height: 120%;
 }
 
@@ -722,6 +769,10 @@ a:hover {
 .lightbox .prev:hover,
 .lightbox .next:hover {
   color: #ccc;
+}
+
+.close:hover {
+  color: #fff;
 }
 
 /* ------------------------------------------------------ */
@@ -1076,6 +1127,129 @@ a.lightbox-close:after {
 }
   /* ------------------------------------------------------ */
 
+.lights-lightbox {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0; width: 100vw; height: 100vh;
+  background: rgba(0,0,0,0.85);
+  align-items: center;
+  justify-content: center;
+}
+
+.lights-lightbox-content {
+  position: relative;
+  width: 90vw;
+  max-width: 800px;
+  margin: 0 auto;
+  display: block;
+}
+
+.lights-prev, .lights-next {
+  cursor: pointer;
+  position: fixed;
+  top: 50%;
+  color: #B17AE1;
+  font-size: 48px;
+  padding: 10px 18px;
+  user-select: none;
+  z-index: 1100;
+  border-radius: 50%;
+  transform: translateY(-50%);
+}
+
+.lights-prev { left: 2vw; }
+.lights-next { right: 2vw; }
+
+.lights-prev:hover, .lights-next:hover {
+  color: #fff;
+}
+
+.lights-lightbox-slide {
+  display: none;
+  width: 100%;
+  text-align: center;
+}
+.lights-lightbox-slide img {
+  max-width: 100%;
+  max-height: 80vh;
+}
+
+.lights-close {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  color: #B17AE1;
+  font-size: 40px;
+  cursor: pointer;
+  z-index: 1010;
+  background: none;
+  border: none;
+  outline: none;
+  transition: color 0.2s;
+}
+.lights-close:hover {
+  color: #fff;
+}
+  /* ------------------------------------------------------ */
+.lights-puzzle-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  grid-auto-rows: 180px;
+  gap: 12px;
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 10px;
+}
+
+.puzzle-item {
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+
+.puzzle-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s, opacity 0.3s;
+  cursor: pointer;
+}
+
+.puzzle-item img:hover {
+  transform: scale(1.05);
+  opacity: 0.7;
+}
+
+/* Make some items span more rows/columns for a "puzzle" effect */
+.puzzle-item.big {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+.puzzle-item.vertical {
+  grid-row: span 2;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .lights-puzzle-grid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    grid-auto-rows: 120px;
+  }
+}
+@media (max-width: 600px) {
+  .lights-puzzle-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 90px;
+  }
+  .puzzle-item.big,
+  .puzzle-item.vertical {
+    grid-column: span 2 !important;
+    grid-row: span 1 !important;
+  }
+}
+  /* ------------------------------------------------------ */
+
   ul {
     position:relative;
     top:10%;
@@ -1109,7 +1283,7 @@ a.lightbox-close:after {
   ul li a span:nth-child(3){
     width:100%;
     height:3px;
-    background:#394B74;
+    background:#B17AE1;
   }
   ul li a span:nth-child(1) {
     top:0;
@@ -1201,13 +1375,13 @@ a.lightbox-close:after {
     text-align: center;
     font-size: 15px;
     padding-top: 10px;
-    color: #394B74;
+    color: #B17AE1;
   }
 
   /* ------------------------------------------------------ */
 
   .type--C{
-    --line_color : #394B74 ;
+    --line_color : #B17AE1 ;
     --back_color : #eef6fc 
   }
   

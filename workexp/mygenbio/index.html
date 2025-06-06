@@ -9,7 +9,9 @@
 </head>
 
 <body>
- <a href="../../index.html"><h1 class="knockout">Hanbee Cho</h1></a> 
+<a href="../../index.html" class="knockout-link">
+  <h1 class="knockout">Hanbee Cho</h1>
+</a>
   
   <nav class="nav1">
      | <a href="../../index.html">Portfolio</a> |
@@ -178,6 +180,8 @@ Together, they delivered a cohesive yet functional digital ecosystem that reflec
 
 <div id="lightbox-app" class="lightbox" data-slide-index="1">
   <span class="close" onclick="closeLightbox('lightbox-app')">&times;</span>
+      <a class="prev" onclick="changeSlide(-1, 'lightbox-app')">&#10094;</a>
+    <a class="next" onclick="changeSlide(1, 'lightbox-app')">&#10095;</a>
   <div class="lightbox-content">
     <div class="lightbox-slide">
       <img src="../../mygen_assets/figma1.png" alt="Image 1">
@@ -212,8 +216,6 @@ Together, they delivered a cohesive yet functional digital ecosystem that reflec
     <div class="lightbox-slide">
       <img src="../../mygen_assets/figma11.png" alt="Image 3">
     </div>
-    <a class="prev" onclick="changeSlide(-1, 'lightbox-app')">&#10094;</a>
-    <a class="next" onclick="changeSlide(1, 'lightbox-app')">&#10095;</a>
   </div>
 </div>
 
@@ -309,24 +311,28 @@ Together, they delivered a cohesive yet functional digital ecosystem that reflec
 <div class="social-works"> 
 <div class="main-image">
    <h6 class="text-header">Instagram</h6>
-  <img id="current-image" src="../../mygen_assets/social6.png" alt="Main Image" onclick="openLightbox('lightbox')">
+  <img id="current-image" src="../../mygen_assets/social6.png" alt="Main Image" onclick="openLightbox('lightbox-social')">
 </div>
 
 <div class="thumbnail-gallery">
   <div class="thumbnail-item">
-    <img src="../../mygen_assets/social6.png" alt="Thumbnail 1" onclick="changeMainImage('../../mygen_assets/social6.png', 1, 'lightbox')">
+    <img src="../../mygen_assets/social6.png" alt="Thumbnail 1" onclick="changeMainImage('../../mygen_assets/social6.png', 1, 'lightbox-social')">
   </div>
   <div class="thumbnail-item">
-    <img src="../../mygen_assets/social4.png" alt="Thumbnail 2" onclick="changeMainImage('../../mygen_assets/social4.png', 2, 'lightbox')">
+    <img src="../../mygen_assets/social4.png" alt="Thumbnail 2" onclick="changeMainImage('../../mygen_assets/social4.png', 2, 'lightbox-social')">
   </div>
   <div class="thumbnail-item">
-    <img src="../../mygen_assets/social2.png" alt="Thumbnail 3" onclick="changeMainImage('../../mygen_assets/social2.png', 3, 'lightbox')">
+    <img src="../../mygen_assets/social2.png" alt="Thumbnail 3" onclick="changeMainImage('../../mygen_assets/social2.png', 3, 'lightbox-social')">
   </div>
 </div>
 
-<div id="lightbox" class="lightbox" data-slide-index="1">
-  <span class="close" onclick="closeLightbox('lightbox')">&times;</span>
+<div id="lightbox-social" class="lightbox" data-slide-index="1">
+  <span class="close" onclick="closeLightbox('lightbox-social')">&times;</span>
+      <a class="prev" onclick="changeSlide(-1, 'lightbox-social')">&#10094;</a>
+    <a class="next" onclick="changeSlide(1, 'lightbox-social')">&#10095;</a>
   <div class="lightbox-content"> 
+        <div class="lightbox-slide">
+      <img src="../../mygen_assets/social6.png" alt="Image 2">
     </div>
     <div class="lightbox-slide">
       <img src="../../mygen_assets/social4.png" alt="Image 2">
@@ -334,8 +340,6 @@ Together, they delivered a cohesive yet functional digital ecosystem that reflec
     <div class="lightbox-slide">
       <img src="../../mygen_assets/social2.png" alt="Image 3">
     </div>
-    <a class="prev" onclick="changeSlide(-1, 'lightbox')">&#10094;</a>
-    <a class="next" onclick="changeSlide(1, 'lightbox')">&#10095;</a>
   </div>
     </div>
 
@@ -417,6 +421,8 @@ I redesigned MyGenBio’s packaging to clearly communicate product benefits and 
 
 <div id="lightbox-packaging" class="lightbox" data-slide-index="1">
   <span class="close" onclick="closeLightbox('lightbox-packaging')">&times;</span>
+      <a class="prev" onclick="changeSlide(-1, 'lightbox-packaging')">&#10094;</a>
+    <a class="next" onclick="changeSlide(1, 'lightbox-packaging')">&#10095;</a>
   <div class="lightbox-content">
     <div class="lightbox-slide">
       <img src="../../mygen_assets/bnos1.png" alt="Image 1">
@@ -430,9 +436,6 @@ I redesigned MyGenBio’s packaging to clearly communicate product benefits and 
     <div class="lightbox-slide">
       <img src="../../mygen_assets/bnos4.png" alt="Image 3">
     </div>
-
-    <a class="prev" onclick="changeSlide(-1, 'lightbox-packaging')">&#10094;</a>
-    <a class="next" onclick="changeSlide(1, 'lightbox-packaging')">&#10095;</a>
   </div>
 </div>
 
@@ -510,6 +513,8 @@ MyGenBio lacked cohesive printed materials for events, promotions, and in-box co
 
 <div id="lightbox-printing" class="lightbox" data-slide-index="1">
   <span class="close" onclick="closeLightbox('lightbox-printing')">&times;</span>
+      <a class="prev" onclick="changeSlide(-1, 'lightbox-printing')">&#10094;</a>
+    <a class="next" onclick="changeSlide(1, 'lightbox-printing')">&#10095;</a>
   <div class="lightbox-content">
     <div class="lightbox-slide">
       <img src="../../mygen_assets/poster1.png" alt="Image 1">
@@ -532,8 +537,6 @@ MyGenBio lacked cohesive printed materials for events, promotions, and in-box co
       <div class="lightbox-slide">
       <img src="../../mygen_assets/poster7.png" alt="Image 3">
     </div>
-    <a class="prev" onclick="changeSlide(-1, 'lightbox-printing')">&#10094;</a>
-    <a class="next" onclick="changeSlide(1, 'lightbox-printing')">&#10095;</a>
   </div>
 </div>
 
@@ -559,7 +562,7 @@ The new printed materials enhanced customer touchpoints at every stage—from in
 </div>
 </div>
 
-
+<!-- 
      <br>
      <h6>Other Works</h6>
      <nav class="nav2">
@@ -568,7 +571,7 @@ The new printed materials enhanced customer touchpoints at every stage—from in
       <a href="../../project/graphicdesign/">Graphic Design</a>|
       <a href="../../project/dma/">Digital Art</a>|
       <a href="../../project/photo/">Photography</a>|
-    </nav>
+    </nav> -->
 
 <!-- Scroll Up Button -->
 <button id="scrollUpBtn" onclick="scrollToTop()">↑</button>

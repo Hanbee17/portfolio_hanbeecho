@@ -294,11 +294,25 @@ a {
   font-weight: bold;
   color: #B17AE1;
   text-decoration: none;
+  position: relative;
+  overflow: hidden;
 }
 
-a:hover {
-  text-decoration: none;
-  --_p: 100%
+a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 2px;
+  background: #B17AE1;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s;
+}
+
+a:hover::after {
+  transform: scaleX(1);
 }
 
 /* a:visited {

@@ -80,3 +80,130 @@ function showTab(index) {
     }
   });
 }
+
+
+
+// Smooth scroll animations for cards
+function initScrollAnimations() {
+  const cards = document.querySelectorAll('.card-link');
+  
+  const observerOptions = {
+    threshold: 0.2,
+    rootMargin: '0px 0px -150px 0px'
+  };
+  
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animate-in');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+  
+  cards.forEach((card) => {
+    observer.observe(card);
+  });
+}
+
+// Navigation Toggle Functionality
+document.addEventListener('DOMContentLoaded', function() {
+  // Initialize scroll animations
+  initScrollAnimations();
+  const navToggle = document.querySelector('.nav-toggle');
+  const navLinks = document.querySelectorAll('.nav-link');
+  const contactNav = document.querySelector('.contact-nav');
+  const contactItems = document.querySelectorAll('.contact-item');
+  
+  // Handle regular nav links (Home, About)
+  navLinks.forEach(link => {
+    if (!link.classList.contains('contact-nav')) {
+      link.addEventListener('click', function(e) {
+        // Remove active class from all links
+        navLinks.forEach(l => l.classList.remove('active'));
+        
+        // Add active class to clicked link
+        this.classList.add('active');
+        
+        // Remove all active classes from nav toggle
+        navToggle.classList.remove('about-active', 'contact-active');
+        
+        // Add appropriate class based on target
+        if (this.dataset.target === 'about') {
+          navToggle.classList.add('about-active');
+        }
+        // home is default position (no class needed)
+      });
+    }
+  });
+  
+  // Handle contact nav click (just the Contact text, not dropdown items)
+  contactNav.addEventListener('click', function(e) {
+    // Don't handle clicks on contact items (let them work normally)
+    if (e.target.closest('.contact-item')) {
+      return;
+    }
+    
+    // Only handle clicks on the contact nav itself
+    if (e.target === this || e.target.textContent.trim() === 'Contact') {
+      e.preventDefault();
+      
+      // Toggle active state for contact dropdown
+      const isActive = this.classList.contains('active');
+      
+      // Remove active class from all nav links
+      navLinks.forEach(l => l.classList.remove('active'));
+      
+      if (!isActive) {
+        // Add active class to contact nav
+        this.classList.add('active');
+        
+        // Set slider to contact position
+        navToggle.classList.remove('about-active');
+        navToggle.classList.add('contact-active');
+      } else {
+        // Remove contact active state
+        navToggle.classList.remove('contact-active');
+        
+        // Set back to home
+        document.querySelector('[data-target="home"]').classList.add('active');
+      }
+    }
+  });
+  
+  // Handle contact items clicks - ensure they work as proper links
+  contactItems.forEach(item => {
+    item.addEventListener('click', function(e) {
+      e.stopPropagation();
+      
+      // Get the href attribute
+      const href = this.getAttribute('href');
+      
+      if (href) {
+        if (href.startsWith('mailto:')) {
+          // For email links, use window.location
+          window.location.href = href;
+        } else if (this.hasAttribute('target') && this.getAttribute('target') === '_blank') {
+          // For external links with target="_blank", open in new tab
+          window.open(href, '_blank');
+        } else {
+          // For other links, navigate normally
+          window.location.href = href;
+        }
+      }
+    });
+  });
+  
+  // Close contact dropdown when clicking outside
+  document.addEventListener('click', function(e) {
+    if (!contactNav.contains(e.target)) {
+      contactNav.classList.remove('active');
+      if (navToggle.classList.contains('contact-active')) {
+        navToggle.classList.remove('contact-active');
+        document.querySelector('[data-target="home"]').classList.add('active');
+      }
+    }
+  });
+});
+
+

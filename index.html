@@ -8,172 +8,118 @@
 </head>
 
 <body>
-  
-<a href="./" class="knockout-link">
-  <h1 class="knockout">Hanbee Cho</h1>
-</a>
-  
-
-<nav class="nav1">
- | <a href="./">Portfolio</a>|
-  <!-- <span class="nav-divider">|</span> -->
-  <a href="./contact">About</a>|
-</nav>
-
-  <div class="gallery-container-a">
-    <h3 id="myHeader2">Job Experience</h3>
-
-      <div class="gallery-items-row">
-   <div class="gallery-item-a">
-    <a href="workexp/mygenbio/index.html"> 
-      <img src="mygen_assets/logo.png" alt="Poster" width="250px" height="250px"></a>
-      <h5>MyGenBio Inc.</h5>
-   </div>
-
-   <!-- <div class="gallery-item-a">
-     <a href="workexp/kki/index.html"> 
-      <img src="kki_assets/logo.png" alt="Poster" width="250px" height="250px"></a>
-      <h5>Gallery KKI</h5>
-      </div> -->
-         </div>
-  </div>
-
-
-  <div class="gallery-container-a">
-  <h3 id="myHeader2">UI/UX Design</h3>
-
-      <div class="gallery-items-row">
-  <div class="gallery-item-a">
-    <a href="./project/uiuxdesign/DittoX"> 
-      <img src="./uiassets/dittox_1.png" alt="Poster" width="250px" height="250px"></a>
-      <h5>DittoX</h5>
-  </div>
-
-  <div class="gallery-item-a">
-         <a href="./project/uiuxdesign/MoClo"> 
-       <img src="./uiassets/moclo_1.png" alt="Poster" width="250px" height="250px"></a>
-       <h5>MoClo</h5>
-     </div>
-
-          <!-- <div class="gallery-item-a">
-       <a href="./project/uiuxdesign/CareFor"> 
-        <img src="./uiassets/carefor_1.png" alt="Poster" width="250px" height="250px"></a>
-        <h5>CareFor</h5>
-       </div> -->
-
-         <!-- <div class="gallery-item-a">
-           <a href="./project/uiuxdesign/Veggielife/"> 
-             <img src="./uiassets/veggielife_2.png" alt="Poster" width="250px" height="250px"></a>
-             <h5>Veggie Life</h5>
-           </div> -->
-      </div>
-
-</div>
-
-
-  <div class="gallery-container-a">
-  <h3 id="myHeader2">Graphic Design</h3>
-
-      <div class="gallery-items-row">
-  <div class="gallery-item-a">
-    <a href="./project/graphicdesign/ando"> 
-      <img src="./graphicdesign_assets/ando9.png" alt="Poster" width="250px" height="250px"></a>
-      <h5>Tadao Ando</h5>
-  </div>
-
-  <div class="gallery-item-a">
-         <a href="./project/graphicdesign/fruity"> 
-       <img src="./graphicdesign_assets/f3.png" alt="Poster" width="250px" height="250px"></a>
-       <h5>Fruity</h5>
-     </div>
-
-    <div class="gallery-item-a">
-      <a href="./project/graphicdesign/path"> 
-        <img src="./graphicdesign_assets/poster4.png" alt="Poster" width="250px" height="250px"></a>
-        <h5>The Path of Exploration</h5>
-      </div>
-
-        <div class="gallery-item-a">
-          <a href="./project/graphicdesign/sun"> 
-            <img src="./graphicdesign_assets/sun_2.jpg" alt="Poster" width="250px" height="250px"></a>
-            <h5>Sun, Moon and Five Peaks</h5>
+  <header class="main-header">
+    <a href="index.html" class="logo">Hanbee Cho</a>
+    <nav class="header-nav">
+      <div class="nav-toggle">
+        <div class="nav-slider"></div>
+        <a href="./" class="nav-link active" data-target="home">Home</a>
+        <a href="./contact" class="nav-link" data-target="about">About</a>
+        <div class="nav-link contact-nav" data-target="contact">
+          Contact
+          <div class="contact-dropdown">
+            <a href="https://www.linkedin.com/in/hanbeecho" target="_blank" class="contact-item linkedin-item">
+              <img src="assets/icon-linkedin.svg" alt="LinkedIn">
+              <span>LinkedIn</span>
+            </a>
+            <a href="https://github.com/Hanbee17" target="_blank" class="contact-item github-item">
+              <img src="assets/icon-github.svg" alt="GitHub">
+              <span>GitHub</span>
+            </a>
           </div>
+        </div>
+      </div>
+    </nav>
+  </header>
 
-          <div class="gallery-item-a">
-            <a href="./project/graphicdesign/tkd/"> 
-              <img src="./graphicdesign_assets/tkd2.png" alt="Poster" width="250px" height="250px"></a>
-              <h5>Tough As Whole Grains</h5>
+  <main>
+    <section class="hero">
+
+      <h1>Hi, I'm Hanbee</h1>
+      <p>I turn ideas into intuitive, visually compelling digital experiences, bridging design and code to transform concepts into reality.</p>
+    </section>
+
+    <section class="cards">
+      <a href="workexp/mygenbio/index.html" class="card-link">
+        <div class="card">
+          <div class="card-content">
+            <div class="card-text">
+              <h3>MyGenBio Inc.</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ultricies, elit sed blandit feugiat.</p>
+              <span class="card-btn">See Project</span>
             </div>
+            <div class="card-image">
+              <img src="mygen_assets/app1.png" alt="Project Image 1">
+            </div>
+          </div>
+        </div>
+      </a>
+      <a href="project/graphicdesign/index.html" class="card-link">
+        <div class="card card-reverse">
+          <div class="card-content">
+            <div class="card-image">
+              <img src="graphicdesign_assets/ando9.png" alt="Project Image 2">
+            </div>
+            <div class="card-text">
+              <h3>Graphic Design</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ultricies, elit sed blandit feugiat.</p>
+              <span class="card-btn">See Project</span>
+            </div>
+          </div>
+        </div>
+      </a>
+      <a href="project/uiuxdesign/DittoX/index.html" class="card-link">
+        <div class="card">
+          <div class="card-content">
+            <div class="card-text">
+              <h3>UI/UX Design</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ultricies, elit sed blandit feugiat.</p>
+              <span class="card-btn">See Project</span>
+            </div>
+            <div class="card-image">
+              <img src="uiassets/dittox_1.png" alt="Project Image 3">
+            </div>
+          </div>
+        </div>
+      </a>
+      <a href="project/dma/index.html" class="card-link">
+        <div class="card card-reverse">
+          <div class="card-content">
+            <div class="card-image">
+              <img src="dma_assets/3d_2.png" alt="Project Image 4">
+            </div>
+            <div class="card-text">
+              <h3>Digital Art</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ultricies, elit sed blandit feugiat.</p>
+              <span class="card-btn">See Project</span>
+            </div>
+          </div>
+        </div>
+      </a>
+      <a href="project/photo/index.html" class="card-link">
+        <div class="card">
+          <div class="card-content">
+            <div class="card-text">
+              <h3>Photography</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ultricies, elit sed blandit feugiat.</p>
+              <span class="card-btn">See Project</span>
+            </div>
+            <div class="card-image">
+              <img src="photos_assets/p1.jpg" alt="Photography Project">
+            </div>
+          </div>
+        </div>
+      </a>
+    </section>
+  </main>
 
-            <div class="gallery-item-a">
-              <a href="./project/graphicdesign/lightnight/"> 
-                <img src="./graphicdesign_assets/lightnight12.png" alt="Poster" width="250px" height="250px"></a>
-                <h5>Light Night</h5>
-              </div>
-      </div>
-
-</div>
-
-
-
-
-<div class="gallery-container-a">
-  <h3 id="myHeader2">Digital Art</h3>
-
-      <div class="gallery-items-row">
- <div class="gallery-item-a">
-   <a href="./project/dma/interactive/"> 
-     <img src="./dma_assets/web1.png" alt="Poster" width="250px" height="250px"></a>
-     <h5>Interactive Websites</h5>
- </div>
- <div class="gallery-item-a">
-  <a href="./project/dma/3d/"> 
-    <img src="./dma_assets/3d_2.png" alt="Poster" width="250px" height="250px"></a>
-      <h5>3D Modelings</h5>
+  <footer class="main-footer">
+    <div class="footer-icons">
+      <a href="https://www.linkedin.com/in/hanbeecho" target="_blank"><img src="assets/icon-linkedin.svg" alt="LinkedIn"></a>
+      <a href="https://github.com/Hanbee17" target="_blank"><img src="assets/icon-github.svg" alt="GitHub"></a>
+      <a href="mailto:hanbee.cho98@gmail.com"><img src="assets/icon-email.svg" alt="Email"></a>
     </div>
-
-    <div class="gallery-item-a">
-      <a href="./project/dma/kinetic/"> 
-        <img src="./dma_assets/kinetic_1.png" alt="Poster" width="250px" height="250px"></a>
-        <h5>Kinetic Typographies</h5>
-      </div>
-      </div>
-</div>
-
-
- <!-- <div class="gallery-container-a">
-  <h3 id="myHeader2">Photography</h3>
-
- <div class="gallery-item-a">
-  <a href="./project/photo/lights"> 
-    <img src="./photos_assets/p1.jpg" alt="Poster" width="250px" height="250px"></a>
-    <h5>Lights</h5>
- </div>
-
- <div class="gallery-item-a">
-  <a href="./project/photo/grains/"> 
-    <img src="./photos_assets/film12.png" alt="Poster" width="250px" height="250px"></a>
-    <h5>Grains</h5>
- </div>
-
- <div class="gallery-item-a">
-  <a href="./project/photo/currents/"> 
-    <img src="./photos_assets/p14.png" alt="Poster" width="250px" height="250px"></a>
-    <h5>Currents</h5>
- </div>
-
-    <div class="gallery-item-a">
-      <a href="./project/photo/garden/"> 
-        <img src="./photos_assets/film6.png" alt="Poster" width="250px" height="250px"></a>
-        <h5>Garden</h5>
-</div>
- </div> -->
-
-<!-- Scroll Up Button -->
-<button id="scrollUpBtn" onclick="scrollToTop()">↑</button>
-
-  <footer>
-    © Hanbee Cho
+    <div class="footer-text">@Hanbee Cho</div>
   </footer>
 </body>
 
